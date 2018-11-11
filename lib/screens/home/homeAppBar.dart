@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-homeAppBar(title, scaffoldKey) =>
+AppBar homeAppBar(String title, GlobalKey<ScaffoldState> scaffoldKey) =>
   AppBar(
     // Here we take the value from the MyHomePage object that was created by
     // the App.build method, and use it to set our appbar title.
