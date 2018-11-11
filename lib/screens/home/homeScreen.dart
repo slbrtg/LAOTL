@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laotl/screens/home/homeAppBar.dart';
 
 void main() => runApp(HomeScreen());
 
@@ -65,23 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        backgroundColor: Colors.white,
-        elevation: 0,  
-        leading: IconButton(
-          icon: new IconTheme(
-            data: new IconThemeData(color: Colors.black), 
-            child: new Icon(Icons.menu),
-          ), 
-          onPressed: () {_scaffoldKey.currentState.openDrawer();},  
-        ), 
-        title: Text(
-          widget.title,
-          style: TextStyle(color: Colors.black),
-          ),
-      ),
+      appBar: homeAppBar(widget.title, _scaffoldKey),
       drawer: new Drawer(
         
       ),
